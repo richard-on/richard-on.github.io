@@ -1,0 +1,269 @@
+html, body{
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+}
+body, label, input, p{
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    color: #fff;
+    font-style: normal;
+
+}
+main{
+    position: relative;
+    height: auto;
+    max-width: 2560px;
+    padding-top: 48px;
+}
+footer{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background: rgba(0,0,0,0.92);
+}
+.metar-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+h2{
+    font-size: 48px;
+}
+h3{
+    font-size: 36px;
+}
+.main-grid{
+    display: grid;
+    background-color: #ffffff;
+    grid-gap: 12px;
+    width: 100%;
+    border-bottom: 12px solid #ffffff;
+    margin-top: 12px;
+
+}
+.hero-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("glideslope_banner.png") center no-repeat;
+    background-size: cover;
+    height: 700px;
+    grid-template-columns: repeat(1, 1fr);
+
+}
+@media(min-width: 1100px) {
+    .main-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.hero-text{
+    max-width: 60%;
+    text-align: center;
+    color: #fff;
+}
+.unit-link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 680px;
+}
+.metar-widget{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("storm_cell.jpg") center no-repeat;
+    background-size: cover;
+}
+.airac-widget{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("chart.jpg") center no-repeat;
+    background-size: cover;
+}
+.photos-widget{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("airplane_land.png") center no-repeat;
+    background-size: cover;
+}
+nav{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 48px;
+    background: rgba(0,0,0,0.92);
+
+}
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 980px;
+    height: 48px;
+    margin: auto;
+    padding: 0;
+
+}
+.menu-item{
+    display: block;
+    width: auto;
+    height: 100%;
+
+}
+.header-link:hover{
+    color: #fff;
+}
+.header-link{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #d7d7d7;
+
+}
+.footer-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright-wrapper{
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.metar-input{
+    display: block;
+    width: 100%;
+    height: auto;
+    color: black;
+}
+.input-form-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 50px auto 50px;
+
+}
+.metar-text-wrapper{
+    color: black;
+}
+.hero-text{
+    max-width: 60%;
+    text-align: center;
+    color: #fff;
+}
+#metar-info{
+    max-width: 60%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.metar-input .metar-widget{
+    display: flex;
+    justify-content: center;
+}
+.metar-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("thunder_sky.jpg") center no-repeat;
+    background-size: cover;
+
+}
+#metar-output{
+    display: none;
+}
+.metar-result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: black;
+
+}
+.metar-preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+.icao-label{
+    margin-bottom: 12px;
+}
+#icao-code{
+    width: 200px;
+    height: 48px;
+    font-size: 48px;
+    border: none;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#get-metar-btn{
+    border: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+}
+#get-metar-btn:hover{
+    background-color: #d7d7d7;
+}
+#icao-code, #get-metar-btn{
+    color: black;
+}
+#name{
+    margin: 0 4px;
+}
+.metar-raw{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    min-width: 50%;
+    height: auto;
+    padding: 24px;
+    margin: 12px;
+    font-family: "Consolas","Courier New", monospace;
+    font-size: 24px;
+    border-radius: 25px;
+    border-color: black;
+    background-color: #afafaf;
+}
+#photo{
+    display: flex;
+    justify-self: center;
+    width: 100%;
+    height: 900px;
+    background: center no-repeat;
+    background-size: cover;
+}
+
+

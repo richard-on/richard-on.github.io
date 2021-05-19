@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Metar info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li class="menu-item logo">
+                <a class="header-link" href="index.html">MAIN</a>
+            </li>
+            <li class="menu-item metar">
+                <a class="header-link" href="metar.html">METAR</a>
+            </li>
+            <li class="menu-item airac">
+                <a class="header-link" href="index.html">AIRAC</a>
+            </li>
+            <li class="menu-item photos">
+                <a class="header-link" href="photos.html">Photos</a>
+            </li>
+            <li class="menu-item unk">
+                <a class="header-link" href="index.html">Unknown</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="metar-input">
+            <div class="metar-hero">
+                <div id="metar-info">
+                    <h2>METAR</h2>
+                    <h4>METAR is a format for reporting weather information.</h4>
+                    <p>A METAR weather report is predominantly used by aircraft pilots, and by meteorologists,
+                        who use aggregated METAR information to assist in weather forecasting.
+                        Raw METAR is the most common format in the world for the transmission of observational weather data.
+                        It is highly standardized through the International Civil Aviation Organization (ICAO),
+                        which allows it to be understood throughout most of the world.
+                    </p>
+                </div>
+                <div class="input-form-wrapper">
+                    <label class="icao-label" for="icao-code"><b>Enter ICAO code of the airport to get its METAR.</b></label>
+                    <input type="text" id="icao-code" maxlength="4" minlength="4" onchange="input()">
+                    <input type="submit" id="get-metar-btn" value="Get METAR">
+                </div>
+            </div>
+        </section>
+        <section id="metar-output">
+            <div class="metar-result">
+                <div class="metar-preview">
+                    <b><span>METAR for </span><span id="name"></span><span>(</span><span id="icao"></span><span>):</span></b>
+                </div>
+                <div class="metar-raw">
+                    <span id="raw"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer metar-footer">
+        <section class="footer-info">
+            <div class="copyright-wrapper">
+                <span>Copyright © 2021 Richard Ragusski.</span>
+            </div>
+        </section>
+    </footer>
+    <script src="metar.js"></script>
+</body>
+</html>
