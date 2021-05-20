@@ -2,9 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Metar info</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <ul class="nav-list">
+            <li class="menu-item logo">
+                <a class="header-link" href="index.html">MAIN</a>
+            </li>
+            <li class="menu-item metar">
+                <a class="header-link" href="metar.html">METAR</a>
+            </li>
+            <li class="menu-item airac">
+                <a class="header-link" href="airac.html">AIRAC</a>
+            </li>
+            <li class="menu-item photos">
+                <a class="header-link" href="photos.html">Photos</a>
+            </li>
+            <li class="menu-item unk">
+                <a class="header-link" href="index.html">Unknown</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="metar-input">
+            <div class="airac-hero">
+                <div id="airac-info">
+                    <h4>Current AIRAC cycle is:</h4>
+                    <h2 id="airac-cycle">AIRAC 2105</h2>
+                    <h4>Valid thru June 17, 2021.</h4>
+                </div>
+            </div>
+        </section>
+        <section class="airac-help">
+            <div id="text-info">
+                    <h4>AIRAC - система заблаговременного уведомления об изменениях аэронавигационных данных по единой
+                    таблице дат вступления их в силу.</h4>
+                    <p>Аббревиатура AIRAC расшифровывается как Aeronautical Information
+                    Regulation And Control, что означает Регламентирование и контроль аэронавигационной информации.</p>
+                    <p>Представляет собой установленный график обновления всех аэронавигационных данных в т.ч. бортовых
+                    навигационных баз данных(БД). В соответствии с этим графиком все БД обновляются каждые 28 дней
+                    – таким образом, в каждом году 13 циклов обновления БД – 13 циклов AIRAC (Cycles).</p>
+                    <p>Все циклы AIRAC обозначаются четырехзначным числом, например, 1005, или 1208, или 1306 и др.</p>
+                    <p>Первые две цифры обозначают номер года (10 = 2010, 12=2012 и 13=2013), вторые две цифры обозначают
+                        номер самого цикла AIRAC - от 01 до 13.</p>
+            </div>
+            <div class="info-img">
 
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="footer-info">
+            <div class="copyright-wrapper">
+                <span>Copyright © 2021 Richard Ragusski.</span>
+            </div>
+        </section>
+    </footer>
+    <script src="airac.js"></script>
 </body>
 </html>
