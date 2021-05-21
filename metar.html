@@ -21,7 +21,7 @@
                 <a class="header-link" href="photos.html">Photos</a>
             </li>
             <li class="menu-item unk">
-                <a class="header-link" href="index.html">Unknown</a>
+                <a class="header-link" href="info.html">Info</a>
             </li>
         </ul>
     </nav>
@@ -41,14 +41,14 @@
                 <div class="input-form-wrapper">
                     <label class="icao-label" for="icao-code"><b>Enter ICAO code of the airport to get its METAR and TAF.
                         <br>For example, UMMS.</b></label>
-                    <input type="text" id="icao-code" maxlength="4" minlength="4" onchange="input()">
+                    <input type="text" id="icao-code" maxlength="4" onchange="input()">
                     <input type="submit" id="get-metar-btn" value="Get METAR">
                 </div>
             </div>
         </section>
         <section id="metar-output">
             <div class="metar-result">
-                <div class="metar-preview">
+                <div class="metar-preview" id="metar-prev">
                     <b><span>METAR for </span><span id="name-metar"></span><span>(</span><span id="icao-metar"></span><span>):</span></b>
                 </div>
                 <div class="metar-raw">
@@ -61,7 +61,7 @@
                 <div class="taf-preview">
                     <b><span>TAF for </span><span id="name-taf"></span><span>(</span><span id="icao-taf"></span><span>):</span></b>
                 </div>
-                <div class="taf-raw">
+                <div class="taf-raw" id="taf-prev">
                     <span id="taf"></span>
                 </div>
             </div>

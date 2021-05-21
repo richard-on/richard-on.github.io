@@ -1,5 +1,9 @@
-function input(){
+function input() {
+    let icaoCode = document.getElementById("icao-code").value.toUpperCase();
+    apiRequest(icaoCode);
+}
 
+async function apiRequest(icaoCode){
     let xhrMetar = new XMLHttpRequest();
     let xhrTaf = new XMLHttpRequest();
 
@@ -15,9 +19,7 @@ function input(){
         }
     });
 
-    const icaoRegex = new RegExp("^[A-Z]{4}$");
-    let icaoCode = document.getElementById("icao-code").value.toUpperCase();
-
+    let icaoRegex = /^[A-Z]{4}$/;
     if(icaoRegex.test(icaoCode)){
         let url = "https://api.checkwx.com/metar/" + icaoCode + "/decoded";
         let urlTaf = "https://api.checkwx.com/taf/" + icaoCode + "/decoded";
@@ -25,7 +27,6 @@ function input(){
         xhrMetar.open("GET", url, true);
         xhrMetar.setRequestHeader('X-API-Key', 'c6decebc5b424af5b86420f021');
         xhrMetar.send();
-        successMetar(xhrMetar);
 
         xhrTaf.open("GET", urlTaf, true);
         xhrTaf.setRequestHeader('X-API-Key', 'c6decebc5b424af5b86420f021');
@@ -34,7 +35,11 @@ function input(){
 
     }
     else{
-        console.log("Error!")
+        outputWrapper.style.display = "block";
+        outputWrapperTaf.style.display = "none";
+        document.getElementById("metar-prev").style.display = "none";
+        document.getElementById("taf-prev").style.display = "none";
+        document.getElementById('raw').innerText = "Incorrect ICAO code input. ICAO is 4 latin letters.";
     }
 }
 
@@ -42,6 +47,7 @@ let outputWrapper = document.getElementById("metar-output");
 
 function successMetar(response) {
     if (response.results > 0) {
+
         let metar = response.data[0];
 
         document.getElementById('icao-metar').innerText = metar.icao;
@@ -49,10 +55,12 @@ function successMetar(response) {
         document.getElementById('raw').innerText = metar.raw_text;
 
         outputWrapper.style.display = "block";
-
+        document.getElementById("metar-prev").style.display = "flex";
 
     } else {
         outputWrapper.style.display = "block";
+        outputWrapperTaf.style.display = "none";
+        document.getElementById("metar-prev").style.display = "none";
         document.getElementById('raw').innerText = "No results returned from API. " +
             "This airport probably doesn't exist.";
     }
@@ -69,8 +77,10 @@ function successTaf(response) {
         document.getElementById('taf').innerText = taf.raw_text;
 
         outputWrapperTaf.style.display = "block";
+        document.getElementById("taf-prev").style.display = "flex";
 
     } else {
+        document.getElementById("taf-prev").style.display = "none";
         outputWrapperTaf.style.display = "none";
     }
 }
