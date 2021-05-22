@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=description content="Site about aviation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aviation Website</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li class="menu-item logo">
+                <a class="header-link" href="../index.html">Main</a>
+            </li>
+            <li class="menu-item metar">
+                <a class="header-link" href="metar.html">METAR</a>
+            </li>
+            <li class="menu-item airac">
+                <a class="header-link" href="airac.html">AIRAC</a>
+            </li>
+            <li class="menu-item photos">
+                <a class="header-link" href="tickets.html">Tickets</a>
+            </li>
+            <li class="menu-item unk">
+                <a class="header-link" href="learn.html">Learn</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="metar-input">
+            <div class="rnav-hero">
+                <div id="airac-info">
+                    <h2>Radio navigation</h2>
+                    <h3>And how it works.</h3>
+                </div>
+            </div>
+        </section>
+        <section class="learn-section">
+            <div id="learn-intro">
+                <h4>Radionavigation is the application of radio frequencies to determine a position of an object on the
+                    Earth, either the vessel or an obstruction.</h4>
+                <p>The basic principles are measurements from/to electric beacons, especially:</p>
+                <ul>
+                    <li>Angular directions, e.g. by bearing, radio phases or interferometry,</li>
+                    <li>Distances, e.g. ranging by measurement of time of flight between one transmitter and multiple
+                        receivers or vice versa,</li>
+                    <li>Distance differences by measurement of times of arrival of signals from one transmitter to
+                        multiple receivers or vice versa</li>
+                    <li>Partly also velocity, e.g. by means of radio Doppler shift.</li>
+                    <li>Combinations of these measurement principles also are important—e.g., many radars measure range
+                        and azimuth of a target.</li>
+                </ul>
+                <div class="sided-info">
+                    <div>
+                        <h4>Most airplanes Today use GPS or combination of IRS and GPS to locate themselves.</h4>
+                        <p>These systems allow airplanes to know their geographical position. While GPS is the most
+                        precise system, it is also the least reliable. You can't guarantee satellite connection
+                        36000 feet above the earth.</p>
+                        <p>That is why most commercial airlines rely on <b>IRS (Inertial Reference System).</b> While it
+                        has some 650 meters of drift for every hour of flight, it doesn't rely on any external reference,
+                        like ground stations or satellites, so the chance of critical failure is smaller than with
+                        other systems.</p>
+                        <p>Inertial navigation is a self-contained navigation technique in which measurements provided
+                            by accelerometers and gyroscopes are used to track the position and orientation of an object
+                            relative to a known starting point, orientation and velocity. Inertial measurement units
+                            (IMUs) typically contain three orthogonal rate-gyroscopes and three orthogonal accelerometers,
+                            measuring angular velocity and linear acceleration respectively. By processing signals from
+                            these devices it is possible to track the position and orientation of a device.</p>
+                        <p>Accordingly, inertial navigation is usually used to supplement other navigation systems,
+                            providing a higher degree of accuracy than is possible with the use of any single system.
+                            For example, if, in terrestrial use, the inertially tracked velocity is intermittently
+                            updated to zero by stopping, the position will remain precise for a much longer time,
+                            a so-called zero velocity update. In aerospace particularly, other measurement systems are
+                            used to determine INS inaccuracies, e.g. the Honeywell LaseRefV inertial navigation systems
+                            uses GPS and air data computer outputs to maintain required navigation performance. The
+                            navigation error rises with the lower sensitivity of the sensors used.</p>
+                    </div>
+                    <img src="../images/irspanel.jpg" alt="irsPanel">
+                </div>
+                <div>
+                    <div>
+                        <h3>VOR transmitters</h3>
+                        <img id="vor" src="../images/vor.jpg" alt="VOR transmitter">
+                        <p>Very high frequency omni-directional range (VOR) is a type of short-range radio navigation
+                            system for aircraft, enabling aircraft with a receiving unit to determine its position and
+                            stay on course by receiving radio signals transmitted by a network of fixed ground radio
+                            beacons. It uses frequencies in the very high frequency (VHF) band from 108.00 to
+                            117.95 MHz.</p>
+                        <p>VOR signals provide considerably greater accuracy and reliability than NDBs due to a
+                            combination of factors. Most significant is that VOR provides a bearing from the station to
+                            the aircraft which does not vary with wind or orientation of the aircraft. VHF radio is less
+                            vulnerable to diffraction (course bending) around terrain features and coastlines. Phase
+                            encoding suffers less interference from thunderstorms.</p>
+                        <p>If a pilot wants to approach the VOR station from due east then the aircraft will have to fly
+                            due west to reach the station. The pilot will use the OBS to rotate the compass dial until
+                            the number 27 (270°) aligns with the pointer (called the primary index) at the top of the
+                            dial. When the aircraft intercepts the 90° radial (due east of the VOR station) the needle
+                            will be centered and the To/From indicator will show "To". Notice that the pilot sets the
+                            VOR to indicate the reciprocal; the aircraft will follow the 90° radial while the VOR
+                            indicates that the course "to" the VOR station is 270°. This is called "proceeding inbound
+                            on the 090 radial." The pilot needs only to keep the needle centered to follow the course to
+                            the VOR station. If the needle drifts off-center the aircraft would be turned towards the
+                            needle until it is centered again. After the aircraft passes over the VOR station the
+                            To/From indicator will indicate "From" and the aircraft is then proceeding outbound on the
+                            270° radial. The CDI needle may oscillate or go to full scale in the "cone of confusion"
+                            directly over the station but will recenter once the aircraft has flown a short distance
+                            beyond the station.</p>
+                        <img id="vor_deviation" src="../images/vor_deviation.gif" alt="VOR deviation">
+                        <p>On the course deviation indicator the radial is selected, and together the needle and TO/FR
+                            flag show the aircraft's position.</p>
+                    </div>
+                    <div>
+                        <h4>More interesting data can be found on
+                            <a href="https://www.skybrary.aero/index.php/Inertial_Reference_System_(IRS)">
+                                skybrary.aero</a> website</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="footer-info">
+            <div class="copyright-wrapper">
+                <span>Copyright © 2021 Richard Ragusski.</span>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

@@ -200,7 +200,20 @@ nav{
     align-items: center;
     width: 100%;
     height: auto;
+    min-height: 600px;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/chart.jpg") center no-repeat;
+    background-size: cover;
+
+}
+.tickets-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/terminal.jpg") center no-repeat;
     background-size: cover;
 
 }
@@ -323,6 +336,50 @@ nav{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/dark_chart.jpg") center no-repeat;
     background-size: cover;
 
+}
+.rnav-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/navigation.jpg") center no-repeat;
+    background-size: cover;
+
+}
+.find-flights{
+    max-width: 980px;
+    width: auto;
+    margin: auto;
+}
+.learn-section{
+    display: block;
+    margin: auto;
+    flex-direction: column;
+    width: 980px;
+    max-width: 80%;
+}
+#learn-intro, #learn-intro p{
+    text-align: left;
+    color: black;
+    width: auto;
+    height: auto;
+    justify-content: center;
+}
+#learn-intro .info-img{
+    height: 1000px;
+}
+.sided-info{
+    display: flex;
+    margin: 24px 0 24px 0;
+}
+#vor_deviation{
+    max-width: 980px;
+}
+#vor{
+    width: 980px;
 }
 
 

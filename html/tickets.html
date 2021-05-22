@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=description content="Site about aviation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photos</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li class="menu-item logo">
+                <a class="header-link" href="../index.html">Main</a>
+            </li>
+            <li class="menu-item metar">
+                <a class="header-link" href="metar.html">METAR</a>
+            </li>
+            <li class="menu-item airac">
+                <a class="header-link" href="airac.html">AIRAC</a>
+            </li>
+            <li class="menu-item photos">
+                <a class="header-link" href="tickets.html">Tickets</a>
+            </li>
+            <li class="menu-item unk">
+                <a class="header-link" href="learn.html">Learn</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="metar-input">
+            <div class="tickets-hero">
+                <div id="metar-info">
+                    <h2>Find Your next destination</h2>
+                    <h4>With one of the most powerful flight-aggregators.</h4>
+                </div>
+
+            </div>
+        </section>
+        <section class="find-flights">
+            <div class="search-widget"
+                 data-flight-type="return"
+                 data-widget-padding="24px"
+                 data-widget-scale="1.2"
+                 data-powered-by-size="0.8"
+                 data-skyscanner-widget="FlightSearchWidget"
+                 data-locale="en-US"
+                 data-market="US"
+                 data-currency="USD"
+                 data-origin-geo-lookup="true">
+            </div>
+        </section>
+    </main>
+    <footer class="footer metar-footer">
+        <section class="footer-info">
+            <div class="copyright-wrapper">
+                <span>Copyright © 2021 Richard Ragusski.</span>
+            </div>
+        </section>
+    </footer>
+    <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
+</body>
+</html>
